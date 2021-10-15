@@ -1,21 +1,21 @@
 ##
-	     (i)# Preparei moléculas (Receptor e Ligantes) pelo chimera.
+	     (i)# First I prepared molecules (Receptor and Ligands) throught chimera.
 		# http://dock.compbio.ucsf.edu/DOCK_6/tutorials/struct_prep/prepping_molecules.htm
 		# http://ambermd.org/antechamber/ac.html
 		# http://ambermd.org/tutorials/pengfei/
-		# É possível executar o antechamber a partir de ligantes no formato .pdb (tetram 1eny), 
-							outros em .mol2 (tetramero 1bvr)
+		# It is possible to run a protein/ligand on antechamber in .pdb format,
+					                         others in .mol2
 
  		_______________________________________________________________________________		
 
 
-			~Antechamber só prepara uma molecula por vez~
-			~Objetivo é gerar um arquivo .prepi/mol2~
+			~Antechamber only prepares one molecule at a time~
+			~The purpose is to generate a .prepi/mol2 file~
 			~A prep or mol2 file is recommended to be used as the intermediate 
 			 file because they contain abundant information and could be used in 
 			 LEaP program directly~
 
-		(ii) antechamber -fi mol2 (ou pdb) -fo prepi -i NAD_D.mol2 -o NAD_D.prepi 
+		(ii) antechamber -fi mol2 (ou pdb) -fo prepi -i LIGAND.mol2 -o LIGAND.prepi 
 			    -c bcc (ou gasteiger) -j 4 -at amber -s 2 -pf -nc (carga ex 2.00)
 
 			(-j: atom type and bond type prediction index, 4: atom and full bond type)
@@ -30,20 +30,20 @@
 			~parmchk2 program to construct an additional frcmod file for the ligand, 
 			 based on the prepi file, this file is necessary on the Leap~
 			
-		(iii) parmchk2 -f prepi -i NAD_D.prepi -o NAD_D.frcmod
+		(iii) parmchk2 -f prepi -i LIGAND.prepi -o LIGAND.frcmod
 
 		_______________________________________________________________________________	
 
-		(iv) cat 1BVR_NO_NAD_H.pdb NAD_D.pdb > 1BVR_D.pdb 
+		(iv) cat Protein_NO_LIGAND_H.pdb LIGAND.pdb > Protein_LIGAND.pdb 
 
-		      #fui dando cat adicionando cada NAD, 				
-		      o proximo seria o C; o último e completo é o ALL/FULL
+		      #I set the cat command to add each LIGAND, since my protein had 4,
+			the next (third) ligand would be the Ligand_C; the last and complete is ALL/FULL
 
 		_______________________________________________________________________________
 
 
-		 (v) pdb4amber -i 1BVR_NAD_ALL.pdb -o 1BVR_NAD_ALL_clean.pdb #limpar o pdb pro amber
+		 (v) pdb4amber -i Protein_LIGAND_ALL.pdb -o Protein_LIGAND_ALL_clean.pdb #to clear pdb for amber use
 		
 		_______________________________________________________________________________
 			
-		 (vi) fiz o Leap.in
+		 (vi) Leap.in step
