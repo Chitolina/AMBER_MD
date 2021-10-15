@@ -16,7 +16,7 @@
 			 LEaP program directly~
 
 		(ii) antechamber -fi mol2 (ou pdb) -fo prepi -i LIGAND.mol2 -o LIGAND.prepi 
-			    -c bcc (ou gasteiger) -j 4 -at amber -s 2 -pf -nc (carga ex 2.00)
+			    -c bcc (ou gasteiger) -j 4 -at amber -s 2 -pf -nc (e.g. charge 2.00)
 
 			(-j: atom type and bond type prediction index, 4: atom and full bond type)
 			(-c: charge method [bcc ou gas])
@@ -42,7 +42,7 @@
 		_______________________________________________________________________________
 
 
-		 (v) pdb4amber -i Protein_LIGAND_ALL.pdb -o Protein_LIGAND_ALL_clean.pdb #to clear pdb for amber use
+		 (v) pdb4amber -i Protein_LIGAND_ALL.pdb -o Protein_LIGAND_ALL_clean.pdb #to clear pdb for DM use
 		
 		_______________________________________________________________________________
 			
