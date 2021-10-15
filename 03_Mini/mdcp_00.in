@@ -1,0 +1,19 @@
+## Equilibrando a Densidade da Caixa D'água por 1 ns (apenas H2O AMBER)
+ &cntrl
+    imin=0, ntx=1, irest=0, ntrx=1,
+    ntxo=1, ntpr=250,
+    ntwr=250, iwrap=0, ntwx=250, ntwv=0, ntwe=0,
+    ioutfm=0, ntwprt=0, idecomp=0,
+    ibelly=1, ntr=0, bellymask=':1076-30643',
+    nstlim=500000, nscm=1000, t=0.0, dt=0.002, nrespa=1,
+    isgld=0, tsgavg=0.2, tempsg=1.0, sgft=0.0, isgsta=1, isgend=1,
+    ntt=1,temp0=298.16, tempi=10.0, ig=71277, tautp=1.0, gamma_ln=0, vrand=0, vlimit=20.0,
+    ntp=1, pres0=1.0, comp=44.6, taup=2.0,
+    ntc=2, tol=0.00001,jfastw=0,
+    ivcap=0,
+    ntf=2, ntb=2, dielc=1.0, cut=9.0, nsnb=25, ipol=0, ifqnt=0,
+    igb=0, ievb=0,
+ /
+ &ewald
+    verbose=0, ew_type=0, nbflag=1, use_pme=1, vdwmeth=1, eedmeth=1, netfrc=0,
+ /

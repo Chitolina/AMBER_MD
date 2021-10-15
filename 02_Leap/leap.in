@@ -1,0 +1,27 @@
+##LEAP -s -f leap.in > leap.out
+
+source leaprc.protein.ff14SB #Source leaprc file for ff14SB protein force field
+
+loadamberprep ../NAD_C/NAD_C.prepi #Load the prepi file for the ligand
+loadamberprep ../NAD_D/NAD_D.prepi
+loadamberprep ../NAD_A/NAD_A.prepi
+loadamberprep ../NAD_B/NAD_B.prepi
+
+mods=loadAmberParams ../NAD_C/NAD_C.frcmod #Load the additional frcmod file for ligand
+mods=loadAmberParams ../NAD_D/NAD_D.frcmod
+mods=loadAmberParams ../NAD_A/NAD_A.frcmod
+mods=loadAmberParams ../NAD_B/NAD_B.frcmod
+
+source leaprc.water.tip3p
+
+mol = loadpdb ../NAD_A/1ENY_Tetramero_FULLNAD_CLEAN.pdb #Load PDB file for protein-ligand complex
+
+solvatebox mol TIP3PBOX 10.0 #Solvate the complex with a cubic water box
+
+#addions mol Cl- 7  #Add Cl- ions to neutralize the system
+
+saveamberparm mol 1ENY_Tetramero.top 1ENY_Tetramero.crd #Save AMBER topology and coordinate files
+
+SavePdb mol 1ENY_Tetramero_BOX.pdb
+
+quit
