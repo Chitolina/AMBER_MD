@@ -1,0 +1,49 @@
+##
+	     (i)# Preparei moléculas (Receptor e Ligantes) pelo chimera.
+		# http://dock.compbio.ucsf.edu/DOCK_6/tutorials/struct_prep/prepping_molecules.htm
+		# http://ambermd.org/antechamber/ac.html
+		# http://ambermd.org/tutorials/pengfei/
+		# É possível executar o antechamber a partir de ligantes no formato .pdb (tetram 1eny), 
+							outros em .mol2 (tetramero 1bvr)
+
+ 		_______________________________________________________________________________		
+
+
+			~Antechamber só prepara uma molecula por vez~
+			~Objetivo é gerar um arquivo .prepi/mol2~
+			~A prep or mol2 file is recommended to be used as the intermediate 
+			 file because they contain abundant information and could be used in 
+			 LEaP program directly~
+
+		(ii) antechamber -fi mol2 (ou pdb) -fo prepi -i NAD_D.mol2 -o NAD_D.prepi 
+			    -c bcc (ou gasteiger) -j 4 -at amber -s 2 -pf -nc (carga ex 2.00)
+
+			(-j: atom type and bond type prediction index, 4: atom and full bond type)
+			(-c: charge method [bcc ou gas])
+			(-at: atom type, can be gaff, amber, bcc and sybyl, default is gaff)
+			(-s: status information can be 0 (brief), 1 (the default) and 2 (verbose))
+			(-pf: remove the intermediate files: can be yes (y) and no (n))
+			(-nc: net molecular charge (integer))
+
+		________________________________________________________________________________
+
+			~parmchk2 program to construct an additional frcmod file for the ligand, 
+			 based on the prepi file, this file is necessary on the Leap~
+			
+		(iii) parmchk2 -f prepi -i NAD_D.prepi -o NAD_D.frcmod
+
+		_______________________________________________________________________________	
+
+		(iv) cat 1BVR_NO_NAD_H.pdb NAD_D.pdb > 1BVR_D.pdb 
+
+		      #fui dando cat adicionando cada NAD, 				
+		      o proximo seria o C; o último e completo é o ALL/FULL
+
+		_______________________________________________________________________________
+
+
+		 (v) pdb4amber -i 1BVR_NAD_ALL.pdb -o 1BVR_NAD_ALL_clean.pdb #limpar o pdb pro amber
+		
+		_______________________________________________________________________________
+			
+		 (vi) fiz o Leap.in
