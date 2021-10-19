@@ -1,4 +1,4 @@
-## Equilibrando a Densidade da Caixa D'água por 1 ns (apenas H2O AMBER)
+## Balancing Water Box Density for 1 ns (H2O AMBER only)
  &cntrl
     imin=0, ntx=1, irest=0, ntrx=1,
     ntxo=1, ntpr=250,
