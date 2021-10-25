@@ -1,9 +1,9 @@
 ## Starting Minimization at with K=25Kcal/mol/angstroms to K=0Kcal/mol/angstroms
 			
-##			#Antes de se iniciar as simulações de DM,o sistema deve ser minimizado para eliminar
-			maus contatos entre os átomos. A minimização de energia, também conhecida como otimização
-			da geometria, é uma técnica que visa encontrar um conjunto de coordenadas que minimizam a
-			energia potencial do sistema de interesse. 
+##Before starting the DM simulations, the system must be minimized to eliminate
+bad contacts between atoms. Energy minimization, also known as optimization
+of geometry, is a technique that aims to find a set of coordinates that minimize the
+potential energy of the system of interest.
 
 
 mpirun -np 16 $AMBERHOME/bin/sander.MPI -O -i mini_00.in \
