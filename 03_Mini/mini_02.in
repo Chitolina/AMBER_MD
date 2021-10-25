@@ -1,4 +1,4 @@
-## Minimização do 1ENY_NADH. NTR=1 Restraint = 10.0
+## 1ENY_NADH Minimization. NTR=1 Restraint = 10.0
  &cntrl
     imin=1, nmropt=0, ntx=1, irest=0, ntrx=1,
     ntxo=1, ntpr=50,
