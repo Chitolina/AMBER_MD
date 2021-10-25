@@ -1,4 +1,4 @@
-## Molecular Dynamics Production at 298.16 K in blocks of 10.0 ns. (ntxo = 2, restart em NetCDF). ioutfm = 1 (escreve trajetória dinâmica em NetCDF).
+## Molecular Dynamics Production at 298.16 K in blocks of 10.0 ns. (ntxo = 2, restart em NetCDF). ioutfm = 1 (NetCDF writing).
  &cntrl
     imin = 0, ntx = 5, irest = 1, ntrx = 1,
     ntxo = 2, ntpr = 500,
