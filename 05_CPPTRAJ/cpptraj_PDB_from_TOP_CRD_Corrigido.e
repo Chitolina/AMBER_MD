@@ -1,5 +1,4 @@
-## Processamento da trajetória de aquecimento de 10.00 k a 298.16 (25.0 C) em 10.0 ns.
-# A trajetória de saída será de 1 em 1 ps
+## Processing the heating path from 10.00 k to 298.16 (25.0 C) in 10.0 ns.
 
 #01 Fixing the periodicity of the simulation box.
 cpptraj  1ENY_Tetramero.top << EOF
@@ -9,7 +8,7 @@ trajin   ../mdcp_*.ncf
 center :1-1076
 image
 
-trajout   mdcp_000ns-100ns_BoxFit.ncf netcdf		! Output também no formato netCDF, cre é default.
+trajout   mdcp_000ns-100ns_BoxFit.ncf netcdf		!Output also in netCDF format, cre is default.
 
 EOF
 
@@ -18,7 +17,7 @@ EOF
 cpptraj  1ENY_Tetramero.top << EOF
 trajin   mdcp_000ns-100ns_BoxFit.ncf 1 10000 20
 
-#vai ler do 1 ao 10000 e salvar a cada 20 frames
+#reading from 1 to 10000 and save every 20 frames
 #strip :Na+
 strip :WAT
 
