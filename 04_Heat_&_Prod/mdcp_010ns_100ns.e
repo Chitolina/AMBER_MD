@@ -1,4 +1,4 @@
-##Prod rodando no cuda usando 1 gpu
+##Prod 
 
 export CUDA_VISIBLE_DEVICES="1"
 
