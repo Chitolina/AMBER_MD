@@ -1,4 +1,4 @@
-##HEATING rodando no cuda usando 1 gpu
+##HEATING 
 
 export CUDA_VISIBLE_DEVICES="1" 
 
