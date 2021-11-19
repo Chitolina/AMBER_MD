@@ -14,7 +14,7 @@ mpirun -np 16 $AMBERHOME/bin/sander.MPI -O -i mini_00.in \
 -ref mdcp_00.cav \
 
 # with K=20Kcal/mol/angstroms 
-mpirun -np 16 $AMBERHOME/bin/sander.MPI -O -i mini_00.in \
+mpirun -np 16 $AMBERHOME/bin/sander.MPI -O -i mini_01.in \
 -p ../01_LEAP/1ENY_Tetramero.top \
 -c mini_00.rst \
 -o mini_01.out \
@@ -22,7 +22,7 @@ mpirun -np 16 $AMBERHOME/bin/sander.MPI -O -i mini_00.in \
 -ref mini_00.rst
 
 # with K=10Kcal/mol/angstroms
-mpirun -np 16 $AMBERHOME/bin/sander.MPI -O -i mini_00.in \
+mpirun -np 16 $AMBERHOME/bin/sander.MPI -O -i mini_02.in \
 -p ../01_LEAP/1ENY_Tetramero.top \
 -c mini_01.rst \
 -o mini_02.out \
@@ -30,7 +30,7 @@ mpirun -np 16 $AMBERHOME/bin/sander.MPI -O -i mini_00.in \
 -ref mini_01.rst
 
 # with K=5Kcal/mol/angstroms
-mpirun -np 16 $AMBERHOME/bin/sander.MPI -O -i mini_00.in \
+mpirun -np 16 $AMBERHOME/bin/sander.MPI -O -i mini_03.in \
 -p ../01_LEAP/1ENY_Tetramero.top \
 -c mini_02.rst \
 -o mini_03.out \
@@ -38,7 +38,7 @@ mpirun -np 16 $AMBERHOME/bin/sander.MPI -O -i mini_00.in \
 -ref mini_02.rst
 
 # with K=1Kcal/mol/angstroms
-mpirun -np 16 $AMBERHOME/bin/sander.MPI -O -i mini_00.in \
+mpirun -np 16 $AMBERHOME/bin/sander.MPI -O -i mini_04.in \
 -p ../01_LEAP/1ENY_Tetramero.top \
 -c mini_03.rst \
 -o mini_04.out \
@@ -46,7 +46,7 @@ mpirun -np 16 $AMBERHOME/bin/sander.MPI -O -i mini_00.in \
 -ref mini_03.rst
 
 # with K=0Kcal/mol/angstroms
-mpirun -np 16 $AMBERHOME/bin/sander.MPI -O -i mini_00.in \
+mpirun -np 16 $AMBERHOME/bin/sander.MPI -O -i mini_05.in \
 -p ../01_LEAP/1ENY_Tetramero.top \
 -c mini_04.rst \
 -o mini_05.out \
