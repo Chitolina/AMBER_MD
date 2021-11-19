@@ -1,4 +1,4 @@
-## Processing the heating path from 10.00 k to 298.16 (25.0 C) in 10.0 ns.
+## Processing the heating and prod files
 
 #01 Fixing the periodicity of the simulation box.
 cpptraj  1ENY_Tetramero.top << EOF
